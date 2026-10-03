@@ -695,7 +695,7 @@
 	}
 
 	window.LocalAds = {
-		version: '1.0.2',
+		version: '1.0.3',
 		/**
 		 * Admin preview: renders immediately, never tracks, never stores visitor state.
 		 */

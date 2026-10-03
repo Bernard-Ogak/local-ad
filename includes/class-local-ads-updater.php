@@ -73,7 +73,7 @@ class Local_Ads_Updater {
 			return $result;
 		}
 		return (object) array(
-			'name'          => 'Local Ads by Bernard',
+			'name'          => 'Local Ad',
 			'slug'          => $args->slug,
 			'version'       => $release['version'],
 			'author'        => '<a href="https://www.creativebay.co.ke">Bernard Ogak (Creative Bay)</a>',

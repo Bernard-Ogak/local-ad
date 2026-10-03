@@ -1,10 +1,10 @@
-=== Local Ads by Bernard ===
+=== Local Ad ===
 Contributors: bernardogak
 Tags: ads, advertising, popup, banner, analytics
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -166,6 +166,9 @@ No. Previews, drafts, paused, scheduled and expired ads are never counted.
 
 == Changelog ==
 
+= 1.0.3 =
+* Changed: the plugin is now called Local Ad. Settings, ads and statistics are unchanged.
+
 = 1.0.2 =
 * Added: updates from GitHub. New releases of Local Ads appear on Dashboard → Updates and the Plugins screen like any other plugin update, with one-click and automatic updates.
 * Fixed: the translation template header reported version 1.0.0.
@@ -188,7 +191,7 @@ Local Ads checks GitHub for new versions of itself, so that updates appear on th
 
 == License ==
 
-Local Ads by Bernard is free software released under the GNU General Public License version 2 or later.
+Local Ad is free software released under the GNU General Public License version 2 or later.
 
 == Author ==
 

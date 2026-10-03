@@ -1,7 +1,13 @@
 # Changelog
 
-All notable changes to Local Ads by Bernard are documented here.
+All notable changes to Local Ad are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
+
+## [1.0.3] - 2026-10-03
+
+### Changed
+
+- The plugin is now called **Local Ad** (it was "Local Ads by Bernard"). Only the name changes (Plugins screen, admin footer credit, update details and documentation): the folder `local-ads`, the text domain, the settings, the database tables and the menu stay the same, so existing sites keep all their ads and statistics.
 
 ## [1.0.2] - 2026-10-03
 

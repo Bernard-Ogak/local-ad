@@ -2,7 +2,7 @@
   <img src="docs/images/icon.png" width="96" height="96" alt="Local Ads icon">
 </p>
 
-<h1 align="center">Local Ads by Bernard</h1>
+<h1 align="center">Local Ad</h1>
 
 <p align="center">
   A self-hosted advertisement manager for WordPress: popups, scheduling, rotation and analytics, with no third-party ad network.
@@ -12,7 +12,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--2.0--or--later-blue.svg" alt="License: GPL-2.0-or-later"></a>
   <img src="https://img.shields.io/badge/WordPress-5.8%2B-21759b.svg" alt="WordPress 5.8+">
   <img src="https://img.shields.io/badge/PHP-7.4%2B-777bb4.svg" alt="PHP 7.4+">
-  <img src="https://img.shields.io/badge/version-1.0.2-green.svg" alt="Version 1.0.2">
+  <img src="https://img.shields.io/badge/version-1.0.3-green.svg" alt="Version 1.0.3">
 </p>
 
 <p align="center">
@@ -77,7 +77,7 @@ git clone https://github.com/Bernard-Ogak/local-ad.git local-ads
 
 The folder must be named `local-ads`.
 
-Then activate **Local Ads by Bernard** on the Plugins screen.
+Then activate **Local Ad** on the Plugins screen.
 
 ## Quick start
 
@@ -108,6 +108,6 @@ Issues and pull requests are welcome. Please follow the [WordPress coding standa
 
 ## License
 
-Local Ads by Bernard is free software, released under the [GNU General Public License v2.0 or later](LICENSE).
+Local Ad is free software, released under the [GNU General Public License v2.0 or later](LICENSE).
 
 Copyright © 2026 Bernard Ogak, [Creative Bay](https://www.creativebay.co.ke).

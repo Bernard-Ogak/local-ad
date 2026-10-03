@@ -1,6 +1,6 @@
 # Local Ads developer guide
 
-How Local Ads by Bernard is built, for contributors and anyone extending or auditing it.
+How Local Ad is built, for contributors and anyone extending or auditing it.
 
 - [Repository layout](#repository-layout)
 - [Architecture](#architecture)

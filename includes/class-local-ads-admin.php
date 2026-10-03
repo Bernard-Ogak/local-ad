@@ -109,7 +109,7 @@ class Local_Ads_Admin {
 		return sprintf(
 			/* translators: 1: plugin name and version, 2: author name, 3: link to Creative Bay. */
 			esc_html__( '%1$s by %2$s · %3$s', 'local-ads' ),
-			'Local Ads ' . esc_html( LOCAL_ADS_VERSION ),
+			'Local Ad ' . esc_html( LOCAL_ADS_VERSION ),
 			'Bernard Ogak',
 			'<a href="https://www.creativebay.co.ke" target="_blank" rel="noopener noreferrer">Creative Bay</a>'
 		);

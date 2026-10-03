@@ -1,6 +1,6 @@
 # Local Ads user guide
 
-This guide covers every screen and setting in Local Ads by Bernard 1.0. It is written for site administrators; no coding is needed.
+This guide covers every screen and setting in Local Ad 1.0. It is written for site administrators; no coding is needed.
 
 - [Installation](#installation)
 - [How Local Ads decides what to show](#how-local-ads-decides-what-to-show)
@@ -299,4 +299,4 @@ The check sends no site, ad or visitor data. To turn it off, add `add_filter( 'l
 
 ---
 
-Local Ads by Bernard · © 2026 Bernard Ogak, [Creative Bay](https://www.creativebay.co.ke) · GPL-2.0-or-later
+Local Ad · © 2026 Bernard Ogak, [Creative Bay](https://www.creativebay.co.ke) · GPL-2.0-or-later
