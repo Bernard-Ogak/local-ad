@@ -299,3 +299,8 @@ Release 1.0.0 was verified against WordPress 7.1.2 on PHP 8.2 and MariaDB 10.4, 
   - Layout: 360–414 px phones, tablet and desktop with no overflow.
   - One popup with three live ads; rotation modes (weighted 300 loads ≈ 52/27/21 for weights 50/30/20).
   - Expiry with cron disabled; previews never tracked.
+
+Release 1.0.1 was re-checked on the same stack after upgrading from 1.0.0 in place (the stored `local_ads_version` option moved to 1.0.1 on the first request):
+
+- **Admin**: all nine Local Ads screens return 200 with no PHP notices and show the 1.0.1 footer; the Plugins screen shows version 1.0.1; `debug.log` stays empty.
+- **Browser**: `LocalAds.version` is `1.0.1`; `localads:track` fires once with `type: "impression"` when the popup opens and once with `type: "click"` when its link is clicked, each with the popup's ad ID, for both scroll and immediate triggers. The 1.0.0 acceptance, keyboard, overlay, reduced-motion, mobile, phone-width and one-popup scenarios still pass with no JavaScript errors.

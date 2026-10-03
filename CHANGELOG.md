@@ -5,6 +5,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ## [Unreleased]
 
+### Fixed
+
+- `languages/local-ads.pot` header now reports `Project-Id-Version: Local Ads by Bernard 1.0.1` (it still said 1.0.0). 1.0.1 added no translatable strings, so the template's strings are unchanged.
+
+### Documentation
+
+- Recaptured the README screenshots (dashboard, edit advertisement, analytics, campaign schedule) from a running 1.0.1 install. The popup screenshot was recaptured too and is unchanged, because 1.0.1 did not change the popup's appearance.
+- Developer guide: added the checks run against 1.0.1.
+
 ## [1.0.1] - 2026-10-03
 
 ### Added
