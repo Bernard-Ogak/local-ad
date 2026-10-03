@@ -4,7 +4,7 @@ Tags: ads, advertising, popup, banner, analytics
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ A locally hosted advertisement management, scheduling and analytics platform for
 
 == Description ==
 
-Local Ads lets you sell and run your own advertisements directly from the WordPress dashboard. Images are stored on your own server, statistics are stored in your own database, and nothing is sent to an outside service.
+Local Ads lets you sell and run your own advertisements directly from the WordPress dashboard. Images are stored on your own server and statistics in your own database. No ad, visitor or statistics data is sent anywhere; the only outside request is the check for new versions on GitHub (see External services).
 
 Each advertisement is an image popup with an optional destination link. You decide when it appears (on scroll, after a delay or immediately), how often a visitor sees it, which pages it runs on, and when it starts and stops. Several campaigns can run at the same time; the rotation engine chooses one popup per visitor so people are never shown a stack of popups.
 
@@ -166,11 +166,25 @@ No. Previews, drafts, paused, scheduled and expired ads are never counted.
 
 == Changelog ==
 
+= 1.0.2 =
+* Added: updates from GitHub. New releases of Local Ads appear on Dashboard → Updates and the Plugins screen like any other plugin update, with one-click and automatic updates.
+* Fixed: the translation template header reported version 1.0.0.
+
 = 1.0.1 =
 * Added: a `localads:track` browser event (detail: `id`, `type`) each time an ad is shown or clicked, so analytics tools such as Blue Lens Analytics can relate ad clicks to visits and conversions.
 
 = 1.0.0 =
 * Initial release.
+
+== External services ==
+
+Local Ads checks GitHub for new versions of itself, so that updates appear on the WordPress update screens.
+
+* What it is for: finding the latest release of Local Ads and downloading its ZIP when you update.
+* What is sent and when: about twice a day, and when you click "Check again" on Dashboard → Updates, your server requests `https://api.github.com/repos/Bernard-Ogak/local-ad/releases/latest`. The request carries only the plugin version in its user agent; no site address, ad, visitor or statistics data is sent. GitHub receives your server's IP address, as with any web request. The release ZIP is downloaded from github.com only when an update is installed.
+* To turn it off: `add_filter( 'local_ads_github_updates', '__return_false' );`
+* Terms: https://docs.github.com/en/site-policy/github-terms/github-terms-of-service
+* Privacy policy: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
 
 == License ==
 

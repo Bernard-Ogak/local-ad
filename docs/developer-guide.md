@@ -278,10 +278,16 @@ This creates `dist/local-ads.zip` containing one `local-ads/` folder with forwar
 
 Release steps:
 
-1. Bump `Version` in `local-ads.php`, `LOCAL_ADS_VERSION`, `Stable tag` in `readme.txt` and the version in `public.js`.
+1. Bump `Version` in `local-ads.php`, `LOCAL_ADS_VERSION`, `Stable tag` in `readme.txt`, the version in `public.js` and the `Project-Id-Version` in `languages/local-ads.pot`.
 2. Add a `CHANGELOG.md` entry.
 3. Build the ZIP.
-4. Tag `vX.Y.Z` and attach the ZIP to a GitHub release.
+4. Tag `vX.Y.Z` and attach the ZIP to a GitHub release. The asset must be named exactly `local-ads.zip`: installed sites only offer releases that have it.
+
+### Updates from GitHub
+
+`Local_Ads_Updater` (`includes/class-local-ads-updater.php`) delivers releases to installed sites. The `Update URI: https://github.com/Bernard-Ogak/local-ad` header makes WordPress (5.8+) skip WordPress.org for this plugin and call the `update_plugins_github.com` filter instead; the updater answers it, for its own basename only, with the version from the latest release's `tag_name` (leading `v` removed) and the URL of its `local-ads.zip` asset. Core compares versions, so an equal version is listed as up to date and automatic updates can be switched on. `plugins_api` is filtered for the slug `local-ads` to show the release notes under **View details**.
+
+The release is read from `https://api.github.com/repos/Bernard-Ogak/local-ad/releases/latest` (drafts and pre-releases are never returned) and cached in the site transient `local_ads_github_release` for 12 hours, or 1 hour after a failure. `?force-check=1` from **Check again** bypasses the cache. Return `false` from `local_ads_github_updates` to disable the check.
 
 ## Testing checklist
 

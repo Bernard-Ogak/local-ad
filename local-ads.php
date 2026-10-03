@@ -2,10 +2,11 @@
 /**
  * Plugin Name:       Local Ads by Bernard
  * Description:       A locally hosted WordPress advertisement management, scheduling and analytics platform.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Plugin URI:        https://github.com/Bernard-Ogak/local-ad
+ * Update URI:        https://github.com/Bernard-Ogak/local-ad
  * Author:            Bernard Ogak (Creative Bay)
  * Author URI:        https://www.creativebay.co.ke
  * License:           GPL-2.0-or-later
@@ -18,7 +19,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'LOCAL_ADS_VERSION', '1.0.1' );
+define( 'LOCAL_ADS_VERSION', '1.0.2' );
 define( 'LOCAL_ADS_DB_VERSION', '1.0.0' );
 define( 'LOCAL_ADS_FILE', __FILE__ );
 define( 'LOCAL_ADS_PATH', plugin_dir_path( __FILE__ ) );
@@ -36,6 +37,7 @@ require_once LOCAL_ADS_PATH . 'includes/class-local-ads-analytics.php';
 require_once LOCAL_ADS_PATH . 'includes/class-local-ads-display.php';
 require_once LOCAL_ADS_PATH . 'includes/class-local-ads-cron.php';
 require_once LOCAL_ADS_PATH . 'includes/class-local-ads-activator.php';
+require_once LOCAL_ADS_PATH . 'includes/class-local-ads-updater.php';
 require_once LOCAL_ADS_PATH . 'includes/class-local-ads.php';
 
 if ( is_admin() ) {

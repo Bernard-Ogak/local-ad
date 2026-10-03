@@ -24,6 +24,7 @@ require_once LOCAL_ADS_PATH . 'includes/class-local-ads-media.php';
  */
 function local_ads_uninstall_site() {
 	wp_clear_scheduled_hook( 'local_ads_maintenance' );
+	delete_site_transient( 'local_ads_github_release' ); // Cached GitHub release, not user data.
 
 	$settings = get_option( 'local_ads_settings', array() );
 	if ( empty( $settings['delete_data'] ) ) {

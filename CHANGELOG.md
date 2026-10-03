@@ -3,14 +3,20 @@
 All notable changes to Local Ads by Bernard are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [1.0.2] - 2026-10-03
+
+### Added
+
+- Updates from GitHub Releases. The new `Update URI` header makes WordPress skip WordPress.org for this plugin, and `Local_Ads_Updater` answers the `update_plugins_github.com` filter with the latest release of `Bernard-Ogak/local-ad` that has `local-ads.zip` attached. Updates then appear on **Dashboard → Updates** and the Plugins screen, with one-click and automatic updates and release notes under **View details**. The release is cached for 12 hours (1 hour after a failed check) and **Check again** refreshes it. Filter `local_ads_github_updates` (return `false`) turns the check off. No site data is sent.
 
 ### Fixed
 
-- `languages/local-ads.pot` header now reports `Project-Id-Version: Local Ads by Bernard 1.0.1` (it still said 1.0.0). 1.0.1 added no translatable strings, so the template's strings are unchanged.
+- `languages/local-ads.pot` header now reports the current version (it still said 1.0.0). No translatable strings were added since 1.0.0, so the template's strings are unchanged.
 
 ### Documentation
 
+- readme.txt: new External services section describing the GitHub update check; the description no longer says nothing is sent to an outside service.
+- Updated screenshot and documentation: the admin screenshots were recaptured from a running 1.0.2 install.
 - Recaptured the README screenshots (dashboard, edit advertisement, analytics, campaign schedule) from a running 1.0.1 install. The popup screenshot was recaptured too and is unchanged, because 1.0.1 did not change the popup's appearance.
 - Developer guide: added the checks run against 1.0.1.
 

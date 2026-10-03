@@ -53,6 +53,7 @@ final class Local_Ads {
 		Local_Ads_Cron::init();
 		Local_Ads_Analytics::init();
 		Local_Ads_Display::init();
+		Local_Ads_Updater::init();
 
 		if ( is_admin() && class_exists( 'Local_Ads_Admin' ) ) {
 			Local_Ads_Admin::init();

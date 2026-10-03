@@ -12,7 +12,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--2.0--or--later-blue.svg" alt="License: GPL-2.0-or-later"></a>
   <img src="https://img.shields.io/badge/WordPress-5.8%2B-21759b.svg" alt="WordPress 5.8+">
   <img src="https://img.shields.io/badge/PHP-7.4%2B-777bb4.svg" alt="PHP 7.4+">
-  <img src="https://img.shields.io/badge/version-1.0.1-green.svg" alt="Version 1.0.1">
+  <img src="https://img.shields.io/badge/version-1.0.2-green.svg" alt="Version 1.0.2">
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
 
 ---
 
-Local Ads lets you sell and run your own advertisements directly from the WordPress dashboard. Images are stored on your server, statistics are stored in your database, and nothing is sent to an outside service.
+Local Ads lets you sell and run your own advertisements directly from the WordPress dashboard. Images are stored on your server and statistics in your database. No ad, visitor or statistics data is sent anywhere; the only outside request is a check of GitHub for new versions, so updates appear on the WordPress update screens.
 
 ![Popup advertisement on a page](docs/images/popup-desktop.png)
 

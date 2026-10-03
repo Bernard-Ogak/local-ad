@@ -269,6 +269,14 @@ Local Ads stores no IP addresses, user agents, names, email addresses or browsin
 
 Frequency control uses the visitor's own browser storage (`sessionStorage` and `localStorage`, keys starting `localAds:`). This data never leaves the browser. You may wish to mention it in your privacy policy.
 
+The only outside request Local Ads makes is the update check described under [Updates](#updates).
+
+## Updates
+
+New versions are published on GitHub. Local Ads checks for them about twice a day and shows them on **Dashboard → Updates** and the **Plugins** screen like any other plugin, so you can update with one click or turn on automatic updates. **View details** shows the release notes. Click **Check again** on **Dashboard → Updates** to look straight away.
+
+The check sends no site, ad or visitor data. To turn it off, add `add_filter( 'local_ads_github_updates', '__return_false' );` to a small plugin or your theme's `functions.php`.
+
 ## Uninstalling
 
 - **Deactivate** stops background maintenance and keeps everything.
