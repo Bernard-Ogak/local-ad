@@ -4,7 +4,7 @@ Tags: ads, advertising, popup, banner, analytics
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -165,6 +165,9 @@ No. Frequency is tracked per advertisement. Use **Settings → Behaviour → Glo
 No. Previews, drafts, paused, scheduled and expired ads are never counted.
 
 == Changelog ==
+
+= 1.0.1 =
+* Added: a `localads:track` browser event (detail: `id`, `type`) each time an ad is shown or clicked, so analytics tools such as Blue Lens Analytics can relate ad clicks to visits and conversions.
 
 = 1.0.0 =
 * Initial release.

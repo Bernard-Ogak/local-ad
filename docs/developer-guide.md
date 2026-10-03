@@ -143,6 +143,19 @@ Both are sanitised by `Local_Ads_Ads::sanitize_display()` and `sanitize_targetin
 7. Only once the image has loaded and the popup is in the DOM does it send the **impression** beacon.
 8. A link click sends the **click** beacon and does not block navigation. It closes the popup if configured.
 
+### Browser event for other scripts
+
+Since 1.0.1, each time a popup is shown (after the image has loaded) or its link is clicked, `public.js` dispatches a `localads:track` event on `document`:
+
+```js
+document.addEventListener( 'localads:track', function ( e ) {
+	// e.detail.id   -> advertisement ID (number)
+	// e.detail.type -> 'impression' or 'click'
+} );
+```
+
+The event fires whether or not Local Ads' own analytics are enabled, and never in previews. It carries only the ad ID, so listeners look up names through `Local_Ads_Ads::get()` or the reports API on the server. [Blue Lens Analytics](https://github.com/Bernard-Ogak/blue_lens_analytics) 0.5+ uses it to record `ad_impression` and `ad_click` events.
+
 `window.LocalAds.preview(ad, global, opts)` renders without tracking or storing state. It is used by the admin preview document.
 
 Browser storage keys (prefix `localAds:`): `s{id}` (sessionStorage, once per session), `v{id}` and `visit` (visits), `d{id}` (day), `h{id}` (hours), `seq` (sequential rotation), `gclosed` (global restriction).

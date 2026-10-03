@@ -12,7 +12,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--2.0--or--later-blue.svg" alt="License: GPL-2.0-or-later"></a>
   <img src="https://img.shields.io/badge/WordPress-5.8%2B-21759b.svg" alt="WordPress 5.8+">
   <img src="https://img.shields.io/badge/PHP-7.4%2B-777bb4.svg" alt="PHP 7.4+">
-  <img src="https://img.shields.io/badge/version-1.0.0-green.svg" alt="Version 1.0.0">
+  <img src="https://img.shields.io/badge/version-1.0.1-green.svg" alt="Version 1.0.1">
 </p>
 
 <p align="center">
@@ -41,6 +41,7 @@ Local Ads lets you sell and run your own advertisements directly from the WordPr
 - **Analytics**: daily impressions and clicks per ad, CTR, lifetime totals, campaign drill-down, date ranges and CSV export. Counters are atomic, so simultaneous clicks are never lost.
 - **Page targeting**: whole site, homepage, posts, pages, WooCommerce products or selected items, with exclusions for checkout, cart, login and URL patterns.
 - **Lightweight and cache-friendly**: one small deferred script with no libraries, styles loaded only when a popup opens, nothing loaded when no ad is running, and ads fetched live so cached pages stay correct.
+- **Works with Blue Lens Analytics**: every shown or clicked ad is announced as a `localads:track` browser event. [Blue Lens Analytics](https://github.com/Bernard-Ogak/blue_lens_analytics) 0.5+ uses it to link ad clicks to channels, pages and conversions.
 - **Secure and private**: capabilities, nonces, prepared SQL and escaping throughout. No IP addresses or personal data are stored.
 
 ## Screenshots

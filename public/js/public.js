@@ -196,6 +196,16 @@
 
 	/* ---------- Tracking ---------- */
 
+	/**
+	 * Tells other scripts on the page (for example Blue Lens Analytics) that an ad was shown or
+	 * clicked: document receives a "localads:track" event with detail { id, type }.
+	 */
+	function announce( ad, type ) {
+		try {
+			document.dispatchEvent( new window.CustomEvent( 'localads:track', { detail: { id: ad.id, type: type } } ) );
+		} catch ( e ) {}
+	}
+
 	function track( ad, type ) {
 		if ( ! cfg.ajaxUrl ) {
 			return;
@@ -455,6 +465,7 @@
 						return;
 					}
 					if ( ! preview ) {
+						announce( ad, 'click' );
 						track( ad, 'click' );
 					} else {
 						e.preventDefault();
@@ -644,6 +655,7 @@
 				if ( g.rotation === 'sequential' ) {
 					write( local, 'seq', ad.id );
 				}
+				announce( ad, 'impression' );
 				if ( g.track ) {
 					track( ad, 'impression' );
 				}
@@ -683,7 +695,7 @@
 	}
 
 	window.LocalAds = {
-		version: '1.0.0',
+		version: '1.0.1',
 		/**
 		 * Admin preview: renders immediately, never tracks, never stores visitor state.
 		 */

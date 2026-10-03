@@ -5,6 +5,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-10-03
+
+### Added
+
+- `localads:track` DOM event, dispatched on `document` with `detail: { id, type }` (`type` is `impression` or `click`) whenever a popup is shown or its link is clicked. Previews never dispatch it. Blue Lens Analytics 0.5+ listens for it to link ad interactions to visits, channels, pages and conversions.
+
 ## [1.0.0] - 2026-10-03
 
 First public release.
@@ -29,5 +35,6 @@ First public release.
 - Clean uninstall that removes data only when enabled, and image files only when separately enabled.
 - Translation template (`languages/local-ads.pot`) and plugin icons.
 
-[Unreleased]: ../../compare/v1.0.0...HEAD
+[Unreleased]: ../../compare/v1.0.1...HEAD
+[1.0.1]: ../../releases/tag/v1.0.1
 [1.0.0]: ../../releases/tag/v1.0.0
