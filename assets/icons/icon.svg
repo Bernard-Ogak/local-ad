@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="la-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f5fd6"/>
+      <stop offset="1" stop-color="#12a37f"/>
+    </linearGradient>
+    <clipPath id="la-img">
+      <rect x="58" y="74" width="124" height="74" rx="8"/>
+    </clipPath>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#la-bg)"/>
+  <rect x="40" y="66" width="160" height="138" rx="16" fill="#0b2a5c" opacity="0.25" transform="translate(4 8)"/>
+  <rect x="44" y="60" width="152" height="136" rx="16" fill="#ffffff"/>
+  <g clip-path="url(#la-img)">
+    <rect x="58" y="74" width="124" height="74" fill="#d6e6fb"/>
+    <circle cx="152" cy="96" r="11" fill="#f5a524"/>
+    <path d="M58 148 L94 108 L120 132 L138 116 L182 148 Z" fill="#2a78d6"/>
+    <path d="M58 148 L94 108 L104 118 L80 148 Z" fill="#1c5cab"/>
+  </g>
+  <rect x="58" y="160" width="78" height="10" rx="5" fill="#c7d2e0"/>
+  <rect x="58" y="176" width="50" height="8" rx="4" fill="#dfe5ee"/>
+  <circle cx="196" cy="62" r="20" fill="#0f172a" stroke="#ffffff" stroke-width="6"/>
+  <path d="M188 54 L204 70 M204 54 L188 70" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M162 150 L162 206 L176 193 L186 214 L197 209 L187 188 L206 188 Z" fill="#ffffff" stroke="#0f172a" stroke-width="6" stroke-linejoin="round"/>
+</svg>

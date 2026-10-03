@@ -1,0 +1,227 @@
+/* Local Ads by Bernard - frontend popup. All selectors are namespaced with .local-ads-. */
+
+.local-ads-root {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: var(--local-ads-z, 999999);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 16px;
+	box-sizing: border-box;
+	overflow: hidden;
+	pointer-events: none;
+	transition: opacity 160ms ease;
+}
+
+.local-ads-root *,
+.local-ads-root *::before,
+.local-ads-root *::after {
+	box-sizing: border-box;
+}
+
+.local-ads-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	opacity: var(--local-ads-opacity, 0.55);
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.local-ads-entering .local-ads-overlay {
+	animation: local-ads-overlay-in var(--local-ads-speed, 400ms) ease-out both;
+}
+
+.local-ads-popup {
+	position: relative;
+	width: 100%;
+	max-width: min(var(--local-ads-width, 600px), 100%);
+	max-height: 100%;
+	display: flex;
+	pointer-events: auto;
+	outline: none;
+}
+
+.local-ads-frame {
+	position: relative;
+	width: 100%;
+	background: #fff;
+	border-radius: var(--local-ads-radius, 8px);
+	box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35);
+}
+
+.local-ads-root .local-ads-link {
+	display: block;
+	line-height: 0;
+	border-radius: inherit;
+	text-decoration: none;
+	border: 0;
+	box-shadow: none;
+}
+
+.local-ads-root .local-ads-link:focus-visible {
+	outline: 3px solid #2271b1;
+	outline-offset: 3px;
+}
+
+.local-ads-root img.local-ads-image {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	max-height: calc(100vh - 64px);
+	max-height: calc(100dvh - 64px);
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: inherit;
+	box-shadow: none;
+	object-fit: contain;
+	background: #fff;
+}
+
+.local-ads-root .local-ads-close {
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	background: #1d1d1d;
+	color: #fff;
+	font: 400 24px/1 Arial, Helvetica, sans-serif;
+	text-transform: none;
+	letter-spacing: 0;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+	transition: background-color 120ms ease, transform 120ms ease;
+}
+
+.local-ads-root .local-ads-close span {
+	display: block;
+	margin-top: -2px;
+	pointer-events: none;
+}
+
+.local-ads-root .local-ads-close:hover {
+	background: #000;
+	transform: scale(1.06);
+}
+
+.local-ads-root .local-ads-close:focus-visible {
+	outline: 3px solid #2271b1;
+	outline-offset: 2px;
+}
+
+.local-ads-root[data-close-pos="top-left"] .local-ads-close {
+	right: auto;
+	left: -12px;
+}
+
+.local-ads-root[data-close-size="small"] .local-ads-close {
+	width: 28px;
+	height: 28px;
+	font-size: 19px;
+}
+
+.local-ads-root[data-close-size="large"] .local-ads-close {
+	width: 44px;
+	height: 44px;
+	font-size: 30px;
+}
+
+.local-ads-root .local-ads-close-pending {
+	visibility: hidden;
+}
+
+.local-ads-label {
+	position: absolute;
+	left: 8px;
+	bottom: 8px;
+	padding: 2px 6px;
+	border-radius: 3px;
+	background: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	font: 600 11px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	pointer-events: none;
+}
+
+.local-ads-closing {
+	opacity: 0;
+}
+
+/* Entrance animations (applied to the popup only while entering). */
+.local-ads-entering[data-anim="fade"] .local-ads-popup { animation: local-ads-fade var(--local-ads-speed, 400ms) ease-out both; }
+.local-ads-entering[data-anim="slide-up"] .local-ads-popup { animation: local-ads-slide-up var(--local-ads-speed, 400ms) cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.local-ads-entering[data-anim="slide-down"] .local-ads-popup { animation: local-ads-slide-down var(--local-ads-speed, 400ms) cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.local-ads-entering[data-anim="slide-left"] .local-ads-popup { animation: local-ads-slide-left var(--local-ads-speed, 400ms) cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.local-ads-entering[data-anim="slide-right"] .local-ads-popup { animation: local-ads-slide-right var(--local-ads-speed, 400ms) cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.local-ads-entering[data-anim="zoom"] .local-ads-popup { animation: local-ads-zoom var(--local-ads-speed, 400ms) cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.local-ads-entering[data-anim="bounce"] .local-ads-popup { animation: local-ads-bounce calc(var(--local-ads-speed, 400ms) * 1.6) ease-out both; }
+.local-ads-entering[data-anim="shake"] .local-ads-popup { animation: local-ads-shake-in calc(var(--local-ads-speed, 400ms) * 1.6) ease-out both; }
+
+/* Temporary attention shake, applied to the inner frame so it never restarts the entrance. */
+.local-ads-frame.local-ads-shaking {
+	animation: local-ads-shake 0.6s ease-in-out infinite;
+}
+
+@keyframes local-ads-overlay-in { from { opacity: 0; } to { opacity: var(--local-ads-opacity, 0.55); } }
+@keyframes local-ads-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes local-ads-slide-up { from { opacity: 0; transform: translateY(48px); } to { opacity: 1; transform: none; } }
+@keyframes local-ads-slide-down { from { opacity: 0; transform: translateY(-48px); } to { opacity: 1; transform: none; } }
+@keyframes local-ads-slide-left { from { opacity: 0; transform: translateX(48px); } to { opacity: 1; transform: none; } }
+@keyframes local-ads-slide-right { from { opacity: 0; transform: translateX(-48px); } to { opacity: 1; transform: none; } }
+@keyframes local-ads-zoom { from { opacity: 0; transform: scale(0.7); } to { opacity: 1; transform: none; } }
+@keyframes local-ads-bounce {
+	0% { opacity: 0; transform: scale(0.3); }
+	50% { opacity: 1; transform: scale(1.06); }
+	70% { transform: scale(0.95); }
+	100% { opacity: 1; transform: none; }
+}
+@keyframes local-ads-shake-in {
+	0% { opacity: 0; transform: translateX(0); }
+	15% { opacity: 1; transform: translateX(-10px); }
+	30% { transform: translateX(10px); }
+	45% { transform: translateX(-8px); }
+	60% { transform: translateX(8px); }
+	75% { transform: translateX(-4px); }
+	100% { opacity: 1; transform: none; }
+}
+@keyframes local-ads-shake {
+	0%, 100% { transform: translateX(0) rotate(0); }
+	20% { transform: translateX(calc(var(--local-ads-shake-distance, 8px) * -1)) rotate(-1deg); }
+	40% { transform: translateX(var(--local-ads-shake-distance, 8px)) rotate(1deg); }
+	60% { transform: translateX(calc(var(--local-ads-shake-distance, 8px) * -0.6)) rotate(-0.5deg); }
+	80% { transform: translateX(calc(var(--local-ads-shake-distance, 8px) * 0.6)) rotate(0.5deg); }
+}
+
+@media (max-width: 600px) {
+	.local-ads-popup {
+		max-width: min(var(--local-ads-mwidth, 92vw), 100%);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.local-ads-root,
+	.local-ads-root * {
+		animation: none !important;
+		transition: none !important;
+	}
+}

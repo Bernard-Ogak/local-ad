@@ -1,0 +1,15 @@
+# Build output
+/dist/
+*.zip
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# Dependencies (none are required, but keep them out if added)
+/node_modules/
+/vendor/
